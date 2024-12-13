@@ -1,6 +1,7 @@
 from geopy.geocoders import Nominatim
 import folium
 from folium.plugins import MarkerCluster
+import branca
 
 # Step 1: Geocode the locations
 locations = {
@@ -50,6 +51,34 @@ for category, places in coordinates.items():
             popup=f"{name} ({category})",
             icon=folium.Icon(color=colors[category])
         ).add_to(marker_cluster)
+
+# Step 3: Add a fancy legend to the map
+legend_html = """
+<div style="
+    position: fixed; 
+    bottom: 50px; left: 50px; width: 220px; height: 160px; 
+    border: 3px solid grey; z-index: 9999; font-size: 14px;
+    background: linear-gradient(to bottom, #ffffff, #e6e6e6); opacity: 0.9; border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+">
+    <div style="padding: 10px;">
+        <h4 style="margin-top: 0; text-align: center;">Legend</h4>
+        <div style="display: flex; align-items: center; margin-top: 10px;">
+            <i class="fa fa-map-marker fa-2x" style="color:lightblue"></i>
+            <span style="margin-left: 10px; font-weight: bold;">Warehouses</span>
+        </div>
+        <div style="display: flex; align-items: center; margin-top: 10px;">
+            <i class="fa fa-map-marker fa-2x" style="color:lightgreen"></i>
+            <span style="margin-left: 10px; font-weight: bold;">Customers</span>
+        </div>
+        <div style="display: flex; align-items: center; margin-top: 10px;">
+            <i class="fa fa-map-marker fa-2x" style="color:darkred"></i>
+            <span style="margin-left: 10px; font-weight: bold;">Suppliers</span>
+        </div>
+    </div>
+</div>
+"""
+mymap.get_root().html.add_child(folium.Element(legend_html))
 
 # Save the map to an HTML file
 mymap.save("index.html")
