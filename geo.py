@@ -33,8 +33,12 @@ for category, places in locations.items():
 
 # Step 2: Create the map
 map_center = [36.7783, -119.4179]  # California center
-mymap = folium.Map(location=map_center, zoom_start=6, tiles='https://tile.jawg.io/jawg-matrix/{z}/{x}/{y}{r}.png?', attr='Jawg')
-
+mymap = folium.Map(
+    location=map_center, 
+    zoom_start=6, 
+    tiles='https://tile.jawg.io/jawg-matrix/{z}/{x}/{y}{r}.png?access-token=z2gKyqiWPtDHngPXWVSxLpd0LvoCR9J2AW1d1Icbw3cTF1QSFGCTGRhfzn2wRXdV', 
+    attr='Jawg'
+)
 colors = {"Warehouses": "blue", "Customers": "green", "Suppliers": "red"}
 
 marker_cluster = MarkerCluster().add_to(mymap)
