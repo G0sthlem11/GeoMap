@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a3fd2b660dd38ef23a016ac4357e6aaa {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a3fd2b660dd38ef23a016ac4357e6aaa" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a3fd2b660dd38ef23a016ac4357e6aaa = L.map(
+                "map_a3fd2b660dd38ef23a016ac4357e6aaa",
+                {
+                    center: [36.7783, -119.4179],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "maxBounds": null,
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2eb025746e6400763766e0a0d47c34b8 = L.tileLayer(
+                "https://tile.jawg.io/jawg-matrix/{z}/{x}/{y}{r}.png?",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Jawg",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2eb025746e6400763766e0a0d47c34b8.addTo(map_a3fd2b660dd38ef23a016ac4357e6aaa);
+        
+    
+            var marker_cluster_96a0e12a088790876f99e445bc5851ff = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_5990ee2e5d0edb8fe1a1b17ac8872dc9 = L.marker(
+                [47.6038321, -122.330062],
+                {
+  "draggable": null,
+  "autoPan": null,
+}
+            ).addTo(marker_cluster_96a0e12a088790876f99e445bc5851ff);
+        
+    
+            var icon_1d44f8751b9ffdc03729259096c5e8a4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_5990ee2e5d0edb8fe1a1b17ac8872dc9.setIcon(icon_1d44f8751b9ffdc03729259096c5e8a4);
+        
+    
+        var popup_ce2eaf98cf1f6d3431704b6a906011f0 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_95ed2f2a12ae67181e2262c8c6bd1479 = $(`<div id="html_95ed2f2a12ae67181e2262c8c6bd1479" style="width: 100.0%; height: 100.0%;">North Warehouse (Warehouses)</div>`)[0];
+                popup_ce2eaf98cf1f6d3431704b6a906011f0.setContent(html_95ed2f2a12ae67181e2262c8c6bd1479);
+            
+        
+
+        marker_5990ee2e5d0edb8fe1a1b17ac8872dc9.bindPopup(popup_ce2eaf98cf1f6d3431704b6a906011f0)
+        ;
+
+        
+    
+    
+            var marker_8f97d5d7ea1593b293d2de4e9bf93f6f = L.marker(
+                [32.7174202, -117.162772],
+                {
+  "draggable": null,
+  "autoPan": null,
+}
+            ).addTo(marker_cluster_96a0e12a088790876f99e445bc5851ff);
+        
+    
+            var icon_acdbaef5e028844d677289144e71a378 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_8f97d5d7ea1593b293d2de4e9bf93f6f.setIcon(icon_acdbaef5e028844d677289144e71a378);
+        
+    
+        var popup_a96fb4034f061e10d77279f932f8d1a1 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_d633d118cf2daee11b08200ea00bd2cc = $(`<div id="html_d633d118cf2daee11b08200ea00bd2cc" style="width: 100.0%; height: 100.0%;">Central Warehouse (Warehouses)</div>`)[0];
+                popup_a96fb4034f061e10d77279f932f8d1a1.setContent(html_d633d118cf2daee11b08200ea00bd2cc);
+            
+        
+
+        marker_8f97d5d7ea1593b293d2de4e9bf93f6f.bindPopup(popup_a96fb4034f061e10d77279f932f8d1a1)
+        ;
+
+        
+    
+    
+            var marker_da7a0fed656f537d5ae15c35657f4496 = L.marker(
+                [34.035591, -118.689423],
+                {
+  "draggable": null,
+  "autoPan": null,
+}
+            ).addTo(marker_cluster_96a0e12a088790876f99e445bc5851ff);
+        
+    
+            var icon_f4fc89cb6cbf495d46ecf76c2ce01bb3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_da7a0fed656f537d5ae15c35657f4496.setIcon(icon_f4fc89cb6cbf495d46ecf76c2ce01bb3);
+        
+    
+        var popup_9e62c662d8ed10d958cd1606fb7c3e61 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_ae64e05b24ee2d03760adead79a39309 = $(`<div id="html_ae64e05b24ee2d03760adead79a39309" style="width: 100.0%; height: 100.0%;">S-Mart (Customers)</div>`)[0];
+                popup_9e62c662d8ed10d958cd1606fb7c3e61.setContent(html_ae64e05b24ee2d03760adead79a39309);
+            
+        
+
+        marker_da7a0fed656f537d5ae15c35657f4496.bindPopup(popup_9e62c662d8ed10d958cd1606fb7c3e61)
+        ;
+
+        
+    
+    
+            var marker_a18fee58be2b9f17e6a24fcb13deb97a = L.marker(
+                [33.7690164, -118.191604],
+                {
+  "draggable": null,
+  "autoPan": null,
+}
+            ).addTo(marker_cluster_96a0e12a088790876f99e445bc5851ff);
+        
+    
+            var icon_d76001485cbcd0651bab850f6b9d41f6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_a18fee58be2b9f17e6a24fcb13deb97a.setIcon(icon_d76001485cbcd0651bab850f6b9d41f6);
+        
+    
+        var popup_f7bb8e40139f916edb8ad73e6fffa7a5 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_fcc98a7718f77e7ed4bd35c25d9fb092 = $(`<div id="html_fcc98a7718f77e7ed4bd35c25d9fb092" style="width: 100.0%; height: 100.0%;">Auto Bros (Customers)</div>`)[0];
+                popup_f7bb8e40139f916edb8ad73e6fffa7a5.setContent(html_fcc98a7718f77e7ed4bd35c25d9fb092);
+            
+        
+
+        marker_a18fee58be2b9f17e6a24fcb13deb97a.bindPopup(popup_f7bb8e40139f916edb8ad73e6fffa7a5)
+        ;
+
+        
+    
+    
+            var marker_3324dc68a745ebd60294e21191fe72e2 = L.marker(
+                [32.5317397, -117.019529],
+                {
+  "draggable": null,
+  "autoPan": null,
+}
+            ).addTo(marker_cluster_96a0e12a088790876f99e445bc5851ff);
+        
+    
+            var icon_2c05f678b817b566af3c5f7acb614889 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_3324dc68a745ebd60294e21191fe72e2.setIcon(icon_2c05f678b817b566af3c5f7acb614889);
+        
+    
+        var popup_90334b7f4aa2c9610440f180a9d209c8 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_589b5c62d027d9d6cf552043a2043573 = $(`<div id="html_589b5c62d027d9d6cf552043a2043573" style="width: 100.0%; height: 100.0%;">Car Fix (Customers)</div>`)[0];
+                popup_90334b7f4aa2c9610440f180a9d209c8.setContent(html_589b5c62d027d9d6cf552043a2043573);
+            
+        
+
+        marker_3324dc68a745ebd60294e21191fe72e2.bindPopup(popup_90334b7f4aa2c9610440f180a9d209c8)
+        ;
+
+        
+    
+    
+            var marker_c746ebbda5f5d2ae45908b0882d2a75c = L.marker(
+                [37.7792588, -122.4193286],
+                {
+  "draggable": null,
+  "autoPan": null,
+}
+            ).addTo(marker_cluster_96a0e12a088790876f99e445bc5851ff);
+        
+    
+            var icon_98fe97ae6566dfede931e8f147407142 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_c746ebbda5f5d2ae45908b0882d2a75c.setIcon(icon_98fe97ae6566dfede931e8f147407142);
+        
+    
+        var popup_755f6529b19a8c30f37c696d13ef76a7 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_bbcf0f116c7791f1b7a1b5009272df87 = $(`<div id="html_bbcf0f116c7791f1b7a1b5009272df87" style="width: 100.0%; height: 100.0%;">CostKing (Customers)</div>`)[0];
+                popup_755f6529b19a8c30f37c696d13ef76a7.setContent(html_bbcf0f116c7791f1b7a1b5009272df87);
+            
+        
+
+        marker_c746ebbda5f5d2ae45908b0882d2a75c.bindPopup(popup_755f6529b19a8c30f37c696d13ef76a7)
+        ;
+
+        
+    
+    
+            var marker_e275dc865ff7e18ef02468c2fa5aabcb = L.marker(
+                [32.5653831, -116.6298787],
+                {
+  "draggable": null,
+  "autoPan": null,
+}
+            ).addTo(marker_cluster_96a0e12a088790876f99e445bc5851ff);
+        
+    
+            var icon_8e2db21c00bdaaaf92451a1926a0a1e8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_e275dc865ff7e18ef02468c2fa5aabcb.setIcon(icon_8e2db21c00bdaaaf92451a1926a0a1e8);
+        
+    
+        var popup_3bed97de1442436a5c3508455dc86106 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_94b0fa5d43673f7ad72deb3468f792d1 = $(`<div id="html_94b0fa5d43673f7ad72deb3468f792d1" style="width: 100.0%; height: 100.0%;">Oilco (Suppliers)</div>`)[0];
+                popup_3bed97de1442436a5c3508455dc86106.setContent(html_94b0fa5d43673f7ad72deb3468f792d1);
+            
+        
+
+        marker_e275dc865ff7e18ef02468c2fa5aabcb.bindPopup(popup_3bed97de1442436a5c3508455dc86106)
+        ;
+
+        
+    
+    
+            var marker_9cc7fdcc19d8c6873e0c9b723ff4a103 = L.marker(
+                [33.7192808, -116.2188054],
+                {
+  "draggable": null,
+  "autoPan": null,
+}
+            ).addTo(marker_cluster_96a0e12a088790876f99e445bc5851ff);
+        
+    
+            var icon_70bcb30948f3207f79f03d55186a02dc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_9cc7fdcc19d8c6873e0c9b723ff4a103.setIcon(icon_70bcb30948f3207f79f03d55186a02dc);
+        
+    
+        var popup_9509ba3cb65a0219dbfe84b65e1a0a61 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_1d606a8797798caa22799554fbbd84bd = $(`<div id="html_1d606a8797798caa22799554fbbd84bd" style="width: 100.0%; height: 100.0%;">Packit (Suppliers)</div>`)[0];
+                popup_9509ba3cb65a0219dbfe84b65e1a0a61.setContent(html_1d606a8797798caa22799554fbbd84bd);
+            
+        
+
+        marker_9cc7fdcc19d8c6873e0c9b723ff4a103.bindPopup(popup_9509ba3cb65a0219dbfe84b65e1a0a61)
+        ;
+
+        
+    
+    
+            var marker_c15148ca932970939912ac156b17e5a6 = L.marker(
+                [32.5317397, -117.019529],
+                {
+  "draggable": null,
+  "autoPan": null,
+}
+            ).addTo(marker_cluster_96a0e12a088790876f99e445bc5851ff);
+        
+    
+            var icon_0228a8af211a13f24f2d482b3a10ea8e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_c15148ca932970939912ac156b17e5a6.setIcon(icon_0228a8af211a13f24f2d482b3a10ea8e);
+        
+    
+        var popup_0f55221b78072a8905212dfae93d2e10 = L.popup({
+  "maxWidth": "100%",
+  "autoClose": null,
+  "closeOnClick": null,
+});
+
+        
+            
+                var html_34af21e2241045fc406d4de2d3afdf69 = $(`<div id="html_34af21e2241045fc406d4de2d3afdf69" style="width: 100.0%; height: 100.0%;">Corrugated (Suppliers)</div>`)[0];
+                popup_0f55221b78072a8905212dfae93d2e10.setContent(html_34af21e2241045fc406d4de2d3afdf69);
+            
+        
+
+        marker_c15148ca932970939912ac156b17e5a6.bindPopup(popup_0f55221b78072a8905212dfae93d2e10)
+        ;
+
+        
+    
+    
+            marker_cluster_96a0e12a088790876f99e445bc5851ff.addTo(map_a3fd2b660dd38ef23a016ac4357e6aaa);
+        
+</script>
+</html>
